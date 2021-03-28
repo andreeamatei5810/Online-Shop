@@ -1,0 +1,60 @@
+main .container{
+	padding:30px 0px;
+}
+
+.harta{
+	height:auto;
+	width:100%;
+}
+
+figcaption{
+	text-align:center;
+	font-size:20px;
+	font-family:"Garamond";
+	padding-top:20px;
+}
+
+ h2{
+	letter-spacing:1.2px;
+	font-family:'Garamond';
+	font-size:30px;
+	text-align: center;
+	color:#000;
+	text-shadow:1px 1px #a6a6a6;
+}
+ p{ 
+    width: 70%; 
+    margin: 10px auto; 
+    padding-bottom: 3%;
+	font-size:20px;
+	text-shadow:1px 1px #a6a6a6;
+}
+  
+.intrebare{
+	text-align:center;
+	
+}	
+
+ input{
+	padding: 10px;
+	margin:10px;
+	width: 200px;
+	background-color:rgba(200, 200, 200, 0.5);
+	font-family:"Garamond";
+	height:20px;
+}
+
+.intrebare button {
+	font-family:"Garamond";
+	width: 100px;
+	background: none;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	height: 40px;
+	cursor: pointer;
+	border:2px solid #888;
+	color: #000;
+	text-transform:uppercase;
+}
+

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <title>Clariss Locatiile magazinelor </title>
+        <link rel="icon" href="images/clariss.png">
+		<link rel="stylesheet" href="css/global.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/style-locatii.css">
+		<link rel="stylesheet" href="css/media.css">
+		<meta charset="UTF-8">
+		<meta name="description" content="Locatiile din Romania ale magazinului de incaltaminte Clariss">
+		<meta name="keywords" content="Pantofi,Tocuri,Locatie,Harta,Clariss">
+		<meta name="author" content="Matei Andreea Madalina">
+		<meta name="viewport" content="width=device-width">
+    </head>
+<body>
+	<%-include("../fragmente/header")%>
+<main>
+
+		<div class="container">
+			<div class="container">
+			<h1>LOCATII</h1>
+			</div>
+			<div class="container">
+			<figure>
+			<img class="harta" src="images/15.PNG" alt="harta">
+			<figcaption>~Magazine curente din Romania~</figcaption>
+			</figure>
+			</div>
+		</div>
+
+	<script src="/js/java-intrebare.js"></script>
+	<div class="container">
+			<h2 id="intr">Care este cel mai vestic oras in care Clariss are sediu?</h2>
+		<div class="intrebare">	
+			<input id="raspuns" type="text" name="q" onfocus="CheckTime()" placeholder="Raspuns">
+			<button onclick="scor()"> Trimite </button>
+			<p id="p"></p>
+		</div>
+	</div>
+	</main>
+    <%-include("../fragmente/footer")%>
+</body>
+</html>

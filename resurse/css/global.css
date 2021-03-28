@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+	border: 0px;
+	font-size: 100%;
+}
+
+a{
+	text-decoration:none;	
+}
+
+h1{
+	text-align:center;
+	margin:20px 30px;
+	font-family: "Garamond";
+	font-size: 40px;
+	border-bottom: 5px double #9900e6;
+	text-transform:uppercase;
+}
+
+.highlight,.active,b{
+	color: #8B008B;
+}
+
+
+body {
+    background-color: #fff ;
+    color: #000;
+	font-family:'Open Sans', sans-serif;
+	font-size:15px;
+	line-height:1.5;
+
+}
+
+.container{
+	width: 85%;
+	height: 100%;
+	margin:auto;
+	overflow:hidden;
+}
+
+.contact-section{
+    background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(214,101,224,1) 100%);
+    background-position:center;
+    display: block;
+    position: relative;
+	height: auto;
+    width: 100% ;
+	letter-spacing:2px;
+	font-family:'Garamond';
+	font-size:20px;
+	text-align: center;
+	color:#fff;
+	text-shadow:1px 1px #a6a6a6;
+}
+
+.contact-section .container h2{
+    text-decoration: underline;
+	font-size:40px;
+	margin-top:20px;	
+}
+.contact-section .container p{ 
+    width: 70%; 
+    margin: 10px auto; 
+    padding-bottom: 3%;
+	font-size:20px;
+	text-shadow:1px 1px #a6a6a6;
+}
+     
+.contact-form{
+	display: grid;
+	grid-template-columns: auto auto;
+ }
+
+.form-info, .form-info address , .form-info a{
+	font-size: 18px;
+	letter-spacing:3px;
+	color:#fff;
+}
+
+.contact-section input{
+	padding: 10px;
+	margin:10px;
+	width: 70%;
+	background-color:rgba(136, 133, 133, 0.5);
+	font-family:"Garamond";
+}
+
+.contact-section input::placeholder{
+	color: white;
+}
+    
+.contact-section textarea{
+	padding: 10px;
+	margin: 10px;     
+	width: 70%;
+	background-color:rgba(136, 133, 133, 0.5);
+	font-family:'Garamond';
+}
+	 
+.contact-section textarea::placeholder{
+	color: white;
+}
+  
+.contact-section .submit{
+	font-family:"Garamond";
+	width: 70%;
+	background: none;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	height: 33px;
+	cursor: pointer;
+	margin-bottom: 5%;
+	border:2px solid #fff;
+	color: #000;
+	text-transform:uppercase;
+}
+
+.contact-section .submit:hover{
+	border: 2px solid #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+.mat {
+  font-size: 20px;
+  text-align:center;
+  margin: 0px 0px;
+}
+
+.mat input{
+	margin: 0px;
+	padding:0px;
+	width: 30px;
+}
+
+.mat label{
+	margin:0px;
+	padding:0px;
+}
+
+footer {
+	background-color:#000;
+	color:#fff;
+	text-align:center;
+	padding-top:10px;
+}

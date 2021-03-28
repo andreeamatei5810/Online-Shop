@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <title>Clariss Lista produse </title>
+        <link rel="icon" href="images/clariss.png">
+		<link rel="stylesheet" href="css/global.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/style-produse.css">
+		<link rel="stylesheet" href="css/media.css">
+		<meta charset="UTF-8">
+		<meta name="description" content="Vizualizarea produselor ce se pot gasi in magazinul online Clariss">
+		<meta name="keywords" content="Pantofi,Tocuri,Sandale,Clariss">
+		<meta name="author" content="Matei Andreea Madalina">
+		<meta name="viewport" content="width=device-width">
+		<script src="js/script.js"></script>
+		<script src="js/ejs.min.js"></script>
+    </head>
+<body>
+	<%-include("../fragmente/header")%>
+	<main>
+	<div class="container">
+		<div class="container">
+			<h1>PRODUSE</h1>
+		</div>
+		<button id="reset"><b>Reseteaza</b></button>
+		<button id="sorteaza_nume"><b>Sorteaza dupa nume</b></button>
+		<button id="sorteaza_desc_culoare"><b>Sorteaza DESCRESC dupa culoare</b></button>
+		<button id="calcul_mediu"><b>Afiseaza pretul mediu al produselor</b></button>
+		<button id="filtru"><b>Arata filtre</b></button><br>
+		<div id="filtre">
+			<input type="radio" id="filtru_roz" name="op1" value="">
+			<label for="filtru_roz">Produse roz</label><br>
+			<input type="radio" id="filtru_pantof" name="op2" value="">
+			<label for="filtru_pantof">Decupat</label><br>
+			<input type="radio" id="filtru_pret_maxim" name="op3" value="">
+			<label for="filtru_pret_maxim">Pret < 200</label><br>
+			<input type="submit" value="Aplica" id="filtru_aplica">
+		</div>
+		<div class="afis" id="afisPretMediu"></div>
+		
+		<!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
+		<div class="afis" id="afisTemplate"></div>
+	</div>
+	
+		<!-- <section class="produse">  -->
+		<!-- <div class="container"> -->
+			<!-- <div class="container"> -->
+			<!-- <h1>PRODUSE</h1> -->
+			<!-- </div> -->
+			<!-- <div class="box-1"> <img class="produs-img" src="images/produse/s1.jpg" alt=""> -->
+					<!-- <p>Pretty lady -->
+					<!-- 220                       -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p1.jpg" alt="">                                                        -->
+					<!-- <p>Miss red -->
+					<!-- 210 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d1.jpg" alt=""> -->
+					<!-- <p>Rose pearl -->
+					<!-- 170                       -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/b1.jpg" alt="">                               -->
+					<!-- <p>Cowgirl -->
+					<!-- 400                    -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t1.jpg" alt="">                               -->
+					<!-- <p>Sunshine -->
+					<!-- 110 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s2.jpg" alt="">                               -->
+					<!-- <p>Sugar daddy -->
+					<!-- 240                  -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p2.jpg" alt=""> -->
+					<!-- <p>Skyfall -->
+					<!-- 290 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d2.jpg" alt=""> -->
+				   <!-- <p>Peewee -->
+					<!-- 310 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/b2.jpg" alt=""> -->
+					<!-- <p>007 -->
+					<!-- 280 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t2.jpg" alt=""> -->
+					<!-- <p>Black widow -->
+					<!-- 100 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s3.jpg" alt=""> -->
+					<!-- <p>The 50s -->
+					<!-- 120 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p3.jpg" alt=""> -->
+				   <!-- <p>Autumn -->
+					<!-- 200 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d3.jpg" alt=""> -->
+					<!-- <p>Grandma -->
+					<!-- 110 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/b3.jpg" alt=""> -->
+					<!-- <p>Chessboard -->
+					<!-- 90 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t3.jpg" alt=""> -->
+					<!-- <p>Blood Sugar -->
+					<!-- 170 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s4.jpg" alt=""> -->
+					<!-- <p>Spring break -->
+					<!-- 260 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p4.jpg" alt=""> -->
+					<!-- <p>Burning desire -->
+					<!-- 230 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d4.jpg" alt=""> -->
+					<!-- <p>Star wars -->
+					<!-- 100 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/b4.jpg" alt=""> -->
+					<!-- <p>Step -->
+					<!-- 290 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t4.jpg" alt=""> -->
+					<!-- <p>Nightsky -->
+					<!-- 200 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s5.jpg" alt=""> -->
+					<!-- <p>Shooting star -->
+					<!-- 370 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p5.jpg" alt=""> -->
+					<!-- <p>Zebra -->
+					<!-- 170 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d5.jpg" alt=""> -->
+					<!-- <p>Tangled -->
+					<!-- 170 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t5.jpg" alt=""> -->
+					<!-- <p>Moooo -->
+					<!-- 350 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s6.jpg" alt=""> -->
+					<!-- <p>Lollypop -->
+					<!-- 190 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p6.jpg" alt=""> -->
+					<!-- <p>Countryside -->
+					<!-- 230 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d6.jpg" alt=""> -->
+					<!-- <p>Criminal -->
+					<!-- 310 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t6.jpg" alt=""> -->
+					<!-- <p>Dracula -->
+					<!-- 90 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s7.jpg" alt=""> -->
+					<!-- <p>Kiwi -->
+					<!-- 190 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p7.jpg" alt=""> -->
+					<!-- <p>Metallic blue -->
+					<!-- 310 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d7.jpg" alt=""> -->
+					<!-- <p>Piggy -->
+					<!-- 210 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/t7.jpg" alt=""> -->
+					<!-- <p>Ebony -->
+					<!-- 350 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/s8.jpg" alt=""> -->
+					<!-- <p>Cocktail night -->
+					<!-- 170 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p8.jpg" alt=""> -->
+					<!-- <p>LGL -->
+					<!-- 310 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d8.jpg" alt=""> -->
+					<!-- <p>Bamboo -->
+					<!-- 285 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p9.jpg" alt=""> -->
+					<!-- <p>Blue fantasy -->
+					<!-- 350 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d9.jpg" alt=""> -->
+					<!-- <p>Pinky touch -->
+					<!-- 200 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p10.jpg" alt=""> -->
+					<!-- <p>Classy&Sassy -->
+					<!-- 270 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/d10.jpg" alt=""> -->
+					<!-- <p>Comfy days -->
+					<!-- 190 -->
+			 <!-- RON</p></div> <div class="box-1"> <img class="produs-img" src="images/produse/p11.jpg" alt="">                                             -->
+					<!-- <p>Bridal vibe -->
+					<!-- 280 -->
+			 <!-- RON</p></div> -->
+		<!-- </div> -->
+		<!-- </section> -->
+	<div class="but-discount">	
+	<button id="discount"> Discount </button>
+	</div>
+
+	</main>
+    <%-include("../fragmente/footer")%>
+</body>
+</html>

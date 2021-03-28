@@ -1,0 +1,40 @@
+	<header>
+		<div class="container">
+			<nav>
+				<a href="acasa.html" class="header-logo"><b>C</b>lariss</a>
+				<img class="header-img" src="images/clariss.png" alt="emblema">
+				<ul>
+					<li><a href="/index">Acasa</a></li>
+					<li><a href="/desprenoi">Despre Noi </a></li>
+					<li><a href="/produse">Produse</a>
+						<ul class="submenu">
+							<li><a href="#">Pantofi</a></li>
+							<li><a href="#">Pantofi decupati</a></li>
+							<li><a href="#">Sandale</a></li>
+							<li><a href="#">Botine</a></li>
+							<li><a href="#">Tocuri</a></li>
+						</ul>
+						</li>
+					<li><a href="/locatii">Locatii</a></li>
+				</ul>
+			</nav>
+		</div>
+		<section>
+			<button type="button" onclick="location.href = '/inregistrare';" class="header-button"> Inregistrare </button>
+			<% if(!locals.username) {  %>
+			<form id="login" method="post" action="/login">
+				    <label>
+						Username: <input type="text" name="username" value="">
+					</label>
+					<label>
+						Parola: <input type="password" name="parola" value="">
+					</label>
+					<button class="submit" type="submit"> Login </button>
+			</form>
+			<% }
+			else { %>
+			<p>Bine ai venit, <%= locals.username  %> </p>
+			<a id="logout" href="/logout">Logout</a>
+			<% } %>
+		</section>
+	</header>

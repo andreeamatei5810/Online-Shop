@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Clariss Inregistrare</title>
+	<link rel="icon" href="images/clariss.png">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-index.css">
+	<link rel="stylesheet" href="css/media.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="Magazin online de incaltaminte Clariss">
+	<meta name="keywords" content="Pantofi,Tocuri,Sandale,Clariss,Magazin,Incaltaminte">
+	<meta name="author" content="Matei Andreea Madalina">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<%-include("../fragmente/header")%>
+	<main>
+	
+
+	<% if(!locals.rsstatus) { %>
+	<section class="contact-section">
+	<div class="container">
+		<h2>Inregistreaza-te</h2>
+		<p>Ne-ar face placere sa devii clientul nostru!</p>
+			<div class="contact-form">
+				<div>
+					<p class="form-info"><b>Sediu:</b>Strada Independentei, Sectorul 1, Bucuresti</p>
+					<p class="form-info"><b>Telefon:</b> 0756688655</p>
+					<p class="form-info"><b>Email:</b> <a href="mailto:clariss@yahoo.com"> clariss@yahoo.com</a></p> 
+				</div>
+				<div>	
+					<form action="/inregistrare" method="post"> 
+						<input name="username" type="text"  placeholder="Username">  
+						<input name="nume" type="text"  placeholder="Numele tau">                                  
+						<input name="email" type="email"  placeholder="Email">     
+						<input name="parola" type="password" name="parola" placeholder="Parola">
+						<input name="rparola" type="password" name="parola" placeholder="Reintroduceti parola">						
+						<input name="telefon" type="number"  placeholder="Numar de telefon">
+						<h3> Pantofii favoriti </h3>
+						<input id="prod" name="prod" type="textarea" placeholder="Ce tipuri de pantofi va plac?">
+						<button type="submit" class="submit" value="Submit"> Inregistreaza </button> 
+					</form>
+				</div>
+			</div>
+	</div>
+	</section>
+	<% } else if(rsstatus=="ok"){ %>
+		<p>Date introduse</p>
+	<% } else {%>
+		<p>Eroare</p>
+	<% } %>
+	</main>
+	<%-include("../fragmente/footer")%>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+@media (max-width: 775px)
+{
+	header nav ul {
+		float:none;
+		text-align:center;
+		width:100%;
+		margin:20px 0px;
+	}
+	header .header-logo, header .header-img {
+		display:inline;
+		float:none;
+	}
+	
+	header nav ul li {
+		display:inline-block;
+		list-style-type:none;
+		position:relative;
+		border:1px solid #000;
+}
+	
+	header nav ul li:hover .submenu {
+		position:absolute;
+		background:transparent;
+		padding:2px;
+		height:auto;	
+		margin: -2px 0px;
+}
+
+	header nav ul li .submenu li {
+		width:180px;
+		background:#ffe6f2;
+}
+
+.contact-section .contact-form{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .contact-section .submit{
+
+        width: 60%;
+      }
+
+
+} 
+
+ @media (max-width: 500px)
+{
+	header nav ul li{
+		width:170px;
+	}
+	header .header-logo, header .header-img {
+		display:inline;
+		float:none;
+	}
+	header nav ul li:hover .submenu {
+		z-index:1;
+}
+	
+} 
